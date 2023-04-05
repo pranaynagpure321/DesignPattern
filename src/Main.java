@@ -1,3 +1,5 @@
+import Builder.Meal;
+import Builder.MealBuilder;
 import Factory.ShapFactory;
 import Factory.Shape;
 import Singelton.SingleDemo;
@@ -60,6 +62,24 @@ public class Main {
             shape3.draw();
         }
 
+        if (pattern.equals("builder"))
+        {
+            MealBuilder mealBuilder = new MealBuilder();
+            Meal vegMeal = mealBuilder.prepareVegMeal();
+
+            System.out.println("veg Meal ");
+            vegMeal.showItems();
+
+            System.out.println("Total cost => " + vegMeal.getCost());
+
+            Meal nonvegMeal = mealBuilder.prepareNonVegMeal();
+            System.out.println("Non veg Meal");
+            nonvegMeal.showItems();
+
+            System.out.println("Total cost => " + nonvegMeal.getCost());
+
+
+        }
     }
 }
 
