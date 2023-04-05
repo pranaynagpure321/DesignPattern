@@ -1,3 +1,4 @@
+import Adapter.AudioPlayer;
 import Builder.Meal;
 import Builder.MealBuilder;
 import Factory.ShapFactory;
@@ -79,6 +80,16 @@ public class Main {
             System.out.println("Total cost => " + nonvegMeal.getCost());
 
 
+        }
+
+        if (pattern.equals("adapter"))
+        {
+            AudioPlayer audioPlayer = new AudioPlayer();
+
+            audioPlayer.play("mp3" , " aaaaa");
+            audioPlayer.play("vlc","bbbbb");
+            audioPlayer.play("mp4","ccccc");
+            audioPlayer.play("avi","ddddd");
         }
     }
 }
