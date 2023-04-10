@@ -1,4 +1,6 @@
 import Adapter.AudioPlayer;
+import Adapter2.Student;
+import Adapter2.StudentClient;
 import Builder.Meal;
 import Builder.MealBuilder;
 import Factory.ShapFactory;
@@ -7,6 +9,7 @@ import Singelton.SingleDemo;
 import pranaymemento.Editior;
 import pranaymemento.History;
 
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -90,6 +93,14 @@ public class Main {
             audioPlayer.play("vlc","bbbbb");
             audioPlayer.play("mp4","ccccc");
             audioPlayer.play("avi","ddddd");
+        }
+
+        if (pattern.equals("adapter2"))
+        {
+            StudentClient client = new StudentClient();
+            List<Student> studentList = client.getStudentList();
+            System.out.println(studentList);
+
         }
     }
 }
